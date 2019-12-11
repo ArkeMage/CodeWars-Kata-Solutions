@@ -1,0 +1,19 @@
+#include <string>
+#include <iostream>
+
+std::string createPhoneNumber(const int arr[10]){
+  
+  std::string newString = "";
+
+	for (int i = 0; i < 10; i++) {
+		newString += std::to_string(arr[i]);
+	}
+
+  newString.insert(0, 1, '(');
+  newString.insert(4, 1, ')');
+  newString.insert(5, 1, ' ');
+  newString.insert(9, 1, '-');
+
+  return newString;
+
+}
