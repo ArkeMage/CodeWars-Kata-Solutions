@@ -1,0 +1,12 @@
+std::string get_middle(std::string input) 
+{
+
+  std::string::size_type i, j;
+
+	j = input.length();
+	i = j % 2 == 0;
+	j /= 2;
+	
+	return ( input.substr( j - i, i + 1 ) );
+  
+}
