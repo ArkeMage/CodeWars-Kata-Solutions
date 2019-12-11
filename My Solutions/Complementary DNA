@@ -1,0 +1,29 @@
+#include <string>
+#include <iostream>
+
+std::string DNAStrand(const std::string& dna) {
+  
+  std::string complement;
+  
+  for (int i = 0; i < dna.size(); i++) {
+    
+   if (dna[i] == 'A') {
+     complement.push_back('T');
+     }
+   else if (dna[i] == 'T') {
+     complement.push_back('A');
+     }
+   else if (dna[i] == 'C') {
+     complement.push_back('G');
+     }
+   else if (dna[i] == 'G') {
+     complement.push_back('C');
+     }
+   else {
+     std::cout << "Not valid. \n";
+     }
+  }
+  
+  return complement;
+  
+}
