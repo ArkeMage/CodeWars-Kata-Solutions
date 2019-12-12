@@ -1,0 +1,19 @@
+bool is_isogram(std::string str) {
+
+  /*if (str.length() <= 1) {    //included in case of strings of 1 or less characters.
+    return false;
+  }*/
+  
+  for (int i = 0; i < str.length(); i++) {
+    str[i] = tolower(str[i]);
+  }
+  
+  sort(str.begin(), str.end());
+
+  for (int i = 0; i < str.length(); i++) {
+    if (str[i] == str[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
